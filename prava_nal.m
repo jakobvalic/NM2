@@ -23,4 +23,7 @@ for ind_vr = 1 : (length(matrika_b) - length(matrika_b) / length(baza)) %permuta
     sez_vsehSt = [sez_vsehSt stevilo];
 end
 
-
+%2. poskus
+for e = -2 : -5
+for i = 1 : 81
+    vrednost = 4^(-2)

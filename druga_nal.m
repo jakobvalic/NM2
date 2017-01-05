@@ -19,8 +19,8 @@ skupna_cena = @(r) plastika(r) + karton(r) %v Eur
 %skupna_cenaV2 = @(r) 
 
 %odvajamo skupno ceno
-odvod_skupne_cene = ??
+%odvod_skupne_cene =
 
 %išèemo r, pri katerem bo skupna cena najmanjša
-x = fzero(odvod_skupne_cene, 1)
+%x = fzero(odvod_skupne_cene, 1)
 
