@@ -17,10 +17,21 @@ c = [b1; b2]
 
 [L U P] = lu(B)
 
-n = L\c
-m = U\n
-y = P\m
+% sedaj velja P*A = L*U, torej A = P^-1*L*U
+% vpeljemo
+% 
+% 
 
-y
+n = P*c
+m = L\n
+y = U\m
+
+eksaktna = A\b % deluje in je pravilno :)
+
+
+
+
+
+
 
 
