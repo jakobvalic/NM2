@@ -1,5 +1,8 @@
 % 2. naloga: Legendrovi polinomi
 
+% Najprej definiramo funkcijo f, ki jo bomo aproksimirali.
+f = @(x) exp(1).^(-x.*(x+1).^2);
+
 format long
 
 % Z Mathematico izraèunamo koeficiente Legendrovih polinomov.
@@ -24,7 +27,7 @@ for i = 1:n
         G(i, j) = quad(@(x)polyval(A(:, i),x).*polyval(A(:, j),x), -1, 1, 1e-12);
     end
     % Raèunamo skalarne produkte i-tega baznega vektorja s funkcijo
-    b(i) = quad(@(x)polyval(A(:,i),x).* f(x),-1,1,1e-12);
+    b(i) = quad(@(x)polyval(A(:,i),x).*f(x),-1,1,1e-12);
 end
 
 
@@ -51,7 +54,6 @@ rezultat = sqrt(quad(@(x)(f(x)-p(x)).*(f(x)-p(x)), -1, 1, 1e-12));
 
 % Funkciji še narišemo
 X = linspace(-1, 1, 1000);
-f = @(x) exp(1).^(-x.*(x+1).^2);
 
 plot(X, f(X), 'r')
 hold on
